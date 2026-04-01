@@ -15,7 +15,7 @@ function myFunction()
        btn1.innerHTML = "change";
   
        const btn2 = document.createElement("button");
-       btn2.innerHTML = "  Färdig";
+       btn2.innerHTML = "  Finished";
 
        const btn3 = document.createElement("button");
        btn3.innerHTML = "Radera";
