@@ -13,7 +13,6 @@ body {
   color: #3a3535;
   background-color: #fdf6f0;
   background-image:
-    /* scattered sticky notes using repeating SVG */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Crect x='20' y='30' width='70' height='70' rx='3' fill='%23fde68a' opacity='0.7' transform='rotate(-8 55 65)'/%3E%3Crect x='160' y='10' width='65' height='65' rx='3' fill='%23fbcfe8' opacity='0.7' transform='rotate(5 192 42)'/%3E%3Crect x='310' y='40' width='72' height='72' rx='3' fill='%23a5f3fc' opacity='0.65' transform='rotate(-4 346 76)'/%3E%3Crect x='60' y='160' width='68' height='68' rx='3' fill='%23bbf7d0' opacity='0.65' transform='rotate(6 94 194)'/%3E%3Crect x='220' y='150' width='66' height='66' rx='3' fill='%23ddd6fe' opacity='0.7' transform='rotate(-7 253 183)'/%3E%3Crect x='350' y='170' width='60' height='60' rx='3' fill='%23fde68a' opacity='0.6' transform='rotate(9 380 200)'/%3E%3Crect x='10' y='300' width='72' height='72' rx='3' fill='%23fbcfe8' opacity='0.65' transform='rotate(-5 46 336)'/%3E%3Crect x='160' y='310' width='68' height='68' rx='3' fill='%23a5f3fc' opacity='0.6' transform='rotate(7 194 344)'/%3E%3Crect x='310' y='290' width='70' height='70' rx='3' fill='%23bbf7d0' opacity='0.65' transform='rotate(-6 345 325)'/%3E%3Crect x='100' y='370' width='64' height='64' rx='3' fill='%23ddd6fe' opacity='0.6' transform='rotate(4 132 402)'/%3E%3Crect x='270' y='360' width='66' height='66' rx='3' fill='%23fde68a' opacity='0.65' transform='rotate(-9 303 393)'/%3E%3C/svg%3E");
   background-size: 420px 420px;
   background-attachment: fixed;
@@ -23,7 +22,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: rgba(253, 246, 240, 0.6);
+  background: rgba(251, 207, 232, 0.35);
   z-index: 0;
   pointer-events: none;
 }
@@ -42,7 +41,6 @@ body > div {
     0 12px 28px rgba(0,0,0,0.07);
 }
 
-/* sticky tape effect on top of card */
 body > div::before {
   content: '';
   position: absolute;
@@ -144,7 +142,6 @@ ul {
   margin-top: 8px;
 }
 
-/* each li looks like a sticky note */
 li {
   display: flex;
   align-items: center;
@@ -157,12 +154,11 @@ li {
   box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
 }
 
-/* rotate alternate sticky notes slightly */
-li:nth-child(odd)  { transform: rotate(-0.6deg); background: #fef9c3; }
-li:nth-child(even) { transform: rotate(0.5deg);  background: #fce7f3; }
-li:nth-child(3n)   { background: #e0f2fe; }
+li:nth-child(odd)  { transform: rotate(-0.6deg); background: #f0fdf4; }
+li:nth-child(even) { transform: rotate(0.5deg);  background: #e0f2fe; }
+li:nth-child(3n)   { background: #ffffff; }
 li:nth-child(4n)   { background: #dcfce7; }
-li:nth-child(5n)   { background: #ede9fe; }
+li:nth-child(5n)   { background: #f0f9ff; }
 
 li:hover {
   transform: rotate(0deg) translateY(-2px) scale(1.01);
