@@ -4,34 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styelsheet.css">
-
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
-
-
 <body>
     <div>
-      
-        <input id="syssla" value="Din syssla">
-        <button onclick="myFunction()">Lägg till</button>  
-        <button onclick="återställ()">Återställ</button>  
-
-        <p id="empty" style="font-style: italic; color:red ;"></p>
-        <p id="refresh" style="font-style: italic; color:green ;"></p>
-
-        <h2>Att göra</h2>  
+        <input id="chore" value="Your chore">
+        <button onclick="myFunction()">Add</button>  
+        <button onclick="reset()">Reset</button>  
+        <p id="empty" style="font-style: italic; color:red;"></p>
+        <p id="refresh" style="font-style: italic; color:green;"></p>
+        <h2>To Do</h2>  
         <ul id="myList"></ul>      
-   </div>
-
-   <div> 
-       <h2>Färdig</h2>
-       <ul id="myList2"></ul>
-
-   </div>    
+    </div>
+    <div> 
+        <h2>Done</h2>
+        <ul id="myList2"></ul>
+    </div>    
     
-
-    <script src="code.js"> </script>
-
+    <script src="code.js"></script>
     
 </body>
 </html>
