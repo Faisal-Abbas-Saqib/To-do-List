@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Permanent+Marker&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,47 +7,23 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   min-height: 100vh;
   padding: 48px 24px;
-  color: #f0ede8;
-  background-color: #2d4a35;
-  background-image: 
-    url('https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=1600&auto=format&fit=crop&q=80'),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 28px,
-      rgba(255,255,255,0.03) 28px,
-      rgba(255,255,255,0.03) 29px
-    );
-  background-size: cover, auto;
-  background-position: center, center;
-  background-attachment: fixed, fixed;
-  background-blend-mode: multiply, normal;
+  color: #3a3535;
+  background-color: #fdf6f0;
+  background-image:
+    /* scattered sticky notes using repeating SVG */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Crect x='20' y='30' width='70' height='70' rx='3' fill='%23fde68a' opacity='0.7' transform='rotate(-8 55 65)'/%3E%3Crect x='160' y='10' width='65' height='65' rx='3' fill='%23fbcfe8' opacity='0.7' transform='rotate(5 192 42)'/%3E%3Crect x='310' y='40' width='72' height='72' rx='3' fill='%23a5f3fc' opacity='0.65' transform='rotate(-4 346 76)'/%3E%3Crect x='60' y='160' width='68' height='68' rx='3' fill='%23bbf7d0' opacity='0.65' transform='rotate(6 94 194)'/%3E%3Crect x='220' y='150' width='66' height='66' rx='3' fill='%23ddd6fe' opacity='0.7' transform='rotate(-7 253 183)'/%3E%3Crect x='350' y='170' width='60' height='60' rx='3' fill='%23fde68a' opacity='0.6' transform='rotate(9 380 200)'/%3E%3Crect x='10' y='300' width='72' height='72' rx='3' fill='%23fbcfe8' opacity='0.65' transform='rotate(-5 46 336)'/%3E%3Crect x='160' y='310' width='68' height='68' rx='3' fill='%23a5f3fc' opacity='0.6' transform='rotate(7 194 344)'/%3E%3Crect x='310' y='290' width='70' height='70' rx='3' fill='%23bbf7d0' opacity='0.65' transform='rotate(-6 345 325)'/%3E%3Crect x='100' y='370' width='64' height='64' rx='3' fill='%23ddd6fe' opacity='0.6' transform='rotate(4 132 402)'/%3E%3Crect x='270' y='360' width='66' height='66' rx='3' fill='%23fde68a' opacity='0.65' transform='rotate(-9 303 393)'/%3E%3C/svg%3E");
+  background-size: 420px 420px;
+  background-attachment: fixed;
 }
 
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: rgba(30, 58, 38, 0.75);
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* Chalk doodle decorations */
-body::after {
-  content: '✓  ✓  ★  ✓  ★  →  ✓  ★  →  ✓';
-  position: fixed;
-  top: 18px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-family: 'Caveat', cursive;
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.1);
-  letter-spacing: 18px;
+  background: rgba(253, 246, 240, 0.6);
   z-index: 0;
   pointer-events: none;
 }
@@ -55,28 +31,40 @@ body::after {
 body > div {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border-radius: 4px;
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
   padding: 32px;
   max-width: 560px;
   margin: 0 auto 28px auto;
   box-shadow:
-    0 0 0 1px rgba(255,255,255,0.05),
-    0 8px 32px rgba(0, 0, 0, 0.4);
+    0 4px 6px rgba(0,0,0,0.04),
+    0 12px 28px rgba(0,0,0,0.07);
+}
+
+/* sticky tape effect on top of card */
+body > div::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background: rgba(253, 230, 138, 0.75);
+  border-radius: 3px;
+  border: 0.5px solid rgba(0,0,0,0.08);
 }
 
 h2 {
-  font-family: 'Caveat', cursive;
-  font-size: 28px;
-  font-weight: 600;
-  color: #ffffff;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  color: #3a3535;
   margin-bottom: 16px;
   padding-bottom: 10px;
-  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
-  letter-spacing: 1px;
+  border-bottom: 2px dashed rgba(0,0,0,0.1);
+  letter-spacing: 0.5px;
 }
 
 .input-row {
@@ -89,66 +77,62 @@ h2 {
   flex: 1;
   height: 42px;
   padding: 0 16px;
-  font-family: 'Caveat', cursive;
-  font-size: 17px;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1.5px dashed rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #3a3535;
+  background: #fffdf7;
+  border: 1.5px solid #fcd34d;
+  border-radius: 8px;
   outline: none;
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 #chore::placeholder {
-  color: rgba(255, 255, 255, 0.35);
-  font-family: 'Caveat', cursive;
+  color: #c4b89a;
 }
 
 #chore:focus {
-  border-color: rgba(255, 220, 100, 0.7);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(253, 224, 71, 0.2);
 }
 
 button {
   height: 42px;
   padding: 0 20px;
-  font-family: 'Caveat', cursive;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 4px;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1.5px solid rgba(0,0,0,0.1);
+  background: #ffffff;
+  color: #3a3535;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
   white-space: nowrap;
-  letter-spacing: 0.5px;
 }
 
 button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 button:active {
-  transform: scale(0.97);
+  transform: scale(0.97) translateY(0);
 }
 
 #empty {
-  font-family: 'Caveat', cursive;
-  font-size: 15px;
-  font-style: italic;
-  color: #fca5a5;
-  min-height: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e11d48;
+  min-height: 20px;
   margin-bottom: 4px;
 }
 
 #refresh {
-  font-family: 'Caveat', cursive;
-  font-size: 15px;
-  font-style: italic;
-  color: #86efac;
-  min-height: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #16a34a;
+  min-height: 20px;
   margin-bottom: 4px;
 }
 
@@ -156,31 +140,34 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   margin-top: 8px;
 }
 
+/* each li looks like a sticky note */
 li {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1.5px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  padding: 10px 14px;
-  transition: background 0.2s, border-color 0.2s;
+  border-radius: 6px;
+  padding: 12px 14px;
+  border: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: relative;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
 }
 
-li::before {
-  content: '☐';
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.4);
-  flex-shrink: 0;
-}
+/* rotate alternate sticky notes slightly */
+li:nth-child(odd)  { transform: rotate(-0.6deg); background: #fef9c3; }
+li:nth-child(even) { transform: rotate(0.5deg);  background: #fce7f3; }
+li:nth-child(3n)   { background: #e0f2fe; }
+li:nth-child(4n)   { background: #dcfce7; }
+li:nth-child(5n)   { background: #ede9fe; }
 
 li:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.35);
+  transform: rotate(0deg) translateY(-2px) scale(1.01);
+  box-shadow: 4px 6px 16px rgba(0,0,0,0.13);
+  z-index: 2;
 }
 
 li input[type="text"],
@@ -188,68 +175,74 @@ li input:not([type]) {
   flex: 1;
   border: none;
   background: transparent;
-  font-family: 'Caveat', cursive;
-  font-size: 17px;
-  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a3535;
   outline: none;
 }
 
 li input[readonly] {
-  color: rgba(255, 255, 255, 0.85);
+  color: #4a4545;
   cursor: default;
 }
 
 li button {
-  height: 30px;
-  padding: 0 12px;
-  font-size: 14px;
-  border-radius: 4px;
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
   flex-shrink: 0;
+  box-shadow: none;
+  border: 1.5px solid rgba(0,0,0,0.12);
 }
 
-/* Edit / Save — yellow chalk */
+li button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Edit / Save — sunny yellow */
 li button:nth-child(2) {
-  background: rgba(253, 224, 71, 0.15);
-  border: 1.5px dashed rgba(253, 224, 71, 0.5);
-  color: #fef08a;
+  background: #fef08a;
+  border-color: #fbbf24;
+  color: #78350f;
 }
 
 li button:nth-child(2):hover {
-  background: rgba(253, 224, 71, 0.28);
-  border-color: rgba(253, 224, 71, 0.8);
+  background: #fde047;
 }
 
-/* Finished — green chalk */
+/* Finished — mint green */
 li button:nth-child(3) {
-  background: rgba(74, 222, 128, 0.15);
-  border: 1.5px dashed rgba(74, 222, 128, 0.5);
-  color: #86efac;
+  background: #bbf7d0;
+  border-color: #34d399;
+  color: #064e3b;
 }
 
 li button:nth-child(3):hover {
-  background: rgba(74, 222, 128, 0.28);
-  border-color: rgba(74, 222, 128, 0.8);
+  background: #6ee7b7;
 }
 
-/* Delete — pink chalk */
+/* Delete — soft rose */
 li button:nth-child(4) {
-  background: rgba(251, 113, 133, 0.15);
-  border: 1.5px dashed rgba(251, 113, 133, 0.5);
-  color: #fda4af;
+  background: #fecdd3;
+  border-color: #fb7185;
+  color: #881337;
 }
 
 li button:nth-child(4):hover {
-  background: rgba(251, 113, 133, 0.28);
-  border-color: rgba(251, 113, 133, 0.8);
+  background: #fda4af;
 }
 
 /* Done list */
-#myList2 li::before {
-  content: '☑';
-  color: #86efac;
+#myList2 li {
+  opacity: 0.75;
+  filter: saturate(0.7);
 }
 
 #myList2 li input[readonly] {
   text-decoration: line-through;
-  color: rgba(255, 255, 255, 0.4);
+  color: #9ca3af;
 }
