@@ -12,7 +12,7 @@ function myFunction()
        text.readOnly=true;
     
        const btn1 = document.createElement("button");
-       btn1.innerHTML = "Ändra";
+       btn1.innerHTML = "change";
   
        const btn2 = document.createElement("button");
        btn2.innerHTML = "  Färdig";
