@@ -8,19 +8,22 @@
 </head>
 <body>
     <div>
-        <input id="chore" placeholder="Your chore">
-        <button onclick="myFunction()">Add</button>  
-        <button onclick="reset()">Reset</button>  
-        <p id="empty" style="font-style: italic; color:red;"></p>
-        <p id="refresh" style="font-style: italic; color:green;"></p>
-        <h2>To Do</h2>  
-        <ul id="myList"></ul>      
+        <div class="input-row">
+            <input id="chore" placeholder="Your chore">
+            <button onclick="myFunction()">Add</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        <p id="empty"></p>
+        <p id="refresh"></p>
+        <h2>To Do</h2>
+        <ul id="myList"></ul>
     </div>
-    <div> 
+
+    <div>
         <h2>Done</h2>
         <ul id="myList2"></ul>
-    </div>    
-    
+    </div>
+
     <script src="code.js"></script>
 </body>
 </html>
