@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chore List</title>
-    <link rel="stylesheet" href="stylesheet.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHORE-OS v2.4.1</title>
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <div class="page-wrap">
-      <header class="app-header">
-        <h1 class="app-title">Chore<span>.</span></h1>
-        <p class="app-subtitle">Track what needs doing</p>
-      </header>
+<div class="page">
+
+  <header class="hdr">
+    <div class="hdr-top">
+      <div class="hdr-dot"></div>
+      <span class="hdr-sys">CHORE-OS v2.4.1</span>
     </div>
-    <div>
-        <div class="input-row">
-            <input id="chore" placeholder="Add a new chore…">
-            <button onclick="myFunction()">Add</button>
-            <button onclick="reset()">Reset</button>
-        </div>
-        <p id="empty"></p>
-        <p id="refresh"></p>
-        <h2>To Do</h2>
-        <ul id="myList"></ul>
+    <div class="hdr-title">$ CHORE<div class="cursor"></div></div>
+    <div class="hdr-sub">TASK MANAGEMENT TERMINAL // READY</div>
+  </header>
+
+  <div class="term">
+    <div class="term-bar">
+      <div class="term-bar-dot g"></div>
+      <div class="term-bar-dot"></div>
+      <div class="term-bar-dot"></div>
+      <span class="term-bar-title">INPUT.exe</span>
     </div>
-    <div>
-        <h2>Done</h2>
-        <ul id="myList2"></ul>
+    <div class="term-body">
+      <div class="prompt-row">
+        <span class="prompt-sym">$&gt;</span>
+        <input id="chore" placeholder="type new task and press [ENTER]">
+        <button class="btn-add" onclick="myFunction()">RUN</button>
+        <button class="btn-reset" onclick="reset()">CLR</button>
+      </div>
+      <p id="empty"></p>
+      <p id="refresh"></p>
+      <h2>PENDING TASKS</h2>
+      <ul id="myList"></ul>
     </div>
-    <script src="code.js"></script>
+  </div>
+
+  <div class="term">
+    <div class="term-bar">
+      <div class="term-bar-dot g"></div>
+      <div class="term-bar-dot"></div>
+      <div class="term-bar-dot"></div>
+      <span class="term-bar-title">COMPLETED.log</span>
+    </div>
+    <div class="term-body">
+      <h2>COMPLETED TASKS</h2>
+      <ul id="myList2"></ul>
+    </div>
+  </div>
+
+</div>
+<script src="code.js"></script>
 </body>
 </html>
